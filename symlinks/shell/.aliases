@@ -1,0 +1,15 @@
+
+# Print human-readable size of file or directory.
+alias sizeof="du -sh"
+
+# Restart Wi-Fi on macOS.
+alias restartwifi="sudo ifconfig en0 down; sudo ifconfig en0 up"
+
+#
+alias zshconfig="code ~/.zshrc"
+
+#
+alias ohmyzsh="code ~/.oh-my-zsh"
+
+#
+alias gcmsgs="git commit -S -m"

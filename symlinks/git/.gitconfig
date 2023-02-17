@@ -1,0 +1,17 @@
+[core]
+  editor = nano -w
+[user]
+  name = SPANIER Nathan
+  email = spaniernathan67@gmail.com
+  signingkey = 9235FF6EC3E406FF
+[gpg]
+  program = gpg
+[filter "lfs"]
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+[fetch]
+  prune = true
+[init]
+  defaultBranch = main
