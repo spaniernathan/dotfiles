@@ -5,11 +5,11 @@ alias sizeof="du -sh"
 # Restart Wi-Fi on macOS.
 alias restartwifi="sudo ifconfig en0 down; sudo ifconfig en0 up"
 
-#
+# Open .zshrc config in VS Code.
 alias zshconfig="code ~/.zshrc"
 
-#
-alias ohmyzsh="code ~/.oh-my-zsh"
+# Open oh-my-zsh config in VS Code.
+alias ohmyzshconfig="code ~/.oh-my-zsh"
 
-#
+# Git commit with GPG signature.
 alias gcmsgs="git commit -S -m"

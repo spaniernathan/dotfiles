@@ -1,10 +1,21 @@
+# Load aliases.
+if [ -f "$HOME/.aliases" ]; then
+    source "$HOME/.aliases"
+fi
+
+# Colors
+export CLICOLOR=1
+
 # ----- PATHS -----
 
 # BIN PATHS
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$PATH
+export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
-export PATH=/usr/local/sbin:$PATH
+export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:$HOME/.yarn/bin
+export PATH=$PATH:$HOME/Scripts
 
 # GOPATH
 export GOPATH=$HOME/go
@@ -38,9 +49,7 @@ unsetopt LIST_BEEP
 
 # ----- ZSH CONFIG -----
 
-# Themes: https://@hub.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="gianu"
-
 CASE_SENSITIVE="false" # Case sensitive auto-completion
 DISABLE_AUTO_UPDATE="false" # Bi-weekly auto-update checks
 DISABLE_UPDATE_PROMPT="true" # Automatically update without prompting
@@ -90,13 +99,3 @@ fi
 
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
-
-
-# ----- ALIAS -----
-
-alias zshconfig="code ~/.zshrc"
-alias ohmyzsh="code ~/.oh-my-zsh"
-alias gcmsgs="git commit -S -m"
-alias sizeof="du -sh"
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/Scripts"
